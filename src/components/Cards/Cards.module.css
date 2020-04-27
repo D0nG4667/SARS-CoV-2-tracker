@@ -2,15 +2,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
+    margin: 50px 0px;
 }
 
 .card {
-    margin: 0 2% !important;
+    margin: 2% 2% !important;
 }
 
-.infected {
+.gif {
+    border-bottom: 10px solid rgba(0, 0, 0, 0.9)
+}
+
+.confirmed {
     border-bottom: 10px solid rgba(0, 0, 255, 0.7)
+}
+
+.active {
+    border-bottom: 10px solid rgba(255, 204, 0, 0.7)
 }
 
 .recovered {
@@ -18,7 +26,8 @@
 }
 
 .deaths {
-    border-bottom: 10px solid rgba(255, 0, 0, 0.7)
+    border-bottom: 10px solid rgba(255, 0, 0, 0.7);
+    /* margin: 3% 0 !important; */
 }
 
 @media only screen and (max-width: 770px) {
