@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import cn from 'classnames';
 
 import styles from './Cards.module.css'
-import coronaGif from '../../images/image.gif';
+import coronaVid from '../../images/image.webm';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
@@ -13,11 +13,14 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center" className={styles.card}>
-        <Grid item component={Card} xs={12} md={3} className={cn(styles.card, styles.gif)}>
+        <Grid item component={Card} xs={12} md={3} className={cn(styles.card, styles.vid)}>
           <CardMedia
-            component="img"
+            component="video"
             alt="Work from Home, Stay Safe #COVID-19"
-            image={coronaGif}
+            image={coronaVid}
+            autoPlay
+            loop
+            muted
           />
         </Grid>
       </Grid>
