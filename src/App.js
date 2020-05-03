@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker } from './components';
+import { Cards, Chart, CountryPicker, Tracking } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
+
 
 // import coronaImage from './images/image.gif';
 
@@ -16,6 +17,8 @@ class App extends React.Component {
     const fetchedData = await fetchData();
 
     this.setState({ data: fetchedData });
+
+    Tracking('UA-165411493-1');
   }
 
   handleCountryChange = async (country) => {
