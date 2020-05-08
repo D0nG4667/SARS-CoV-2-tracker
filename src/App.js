@@ -18,7 +18,6 @@ class App extends React.Component {
 
     this.setState({ data: fetchedData });
 
-    Tracking('UA-165411493-1');
   }
 
   handleCountryChange = async (country) => {
@@ -30,6 +29,8 @@ class App extends React.Component {
 
   render() {
     const { data, country } = this.state;
+
+    Tracking('UA-165411493-1');
 
     return (
       <div className={styles.container}>
