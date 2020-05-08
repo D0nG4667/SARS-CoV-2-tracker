@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker, Tracking } from './components';
+import { Cards, Chart, CountryPicker, initGA, PageView } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 
@@ -18,6 +18,9 @@ class App extends React.Component {
 
     this.setState({ data: fetchedData });
 
+    initGA('UA-165411493-1');
+
+    PageView();
   }
 
   handleCountryChange = async (country) => {
@@ -29,8 +32,6 @@ class App extends React.Component {
 
   render() {
     const { data, country } = this.state;
-
-    Tracking('UA-165411493-1');
 
     return (
       <div className={styles.container}>
