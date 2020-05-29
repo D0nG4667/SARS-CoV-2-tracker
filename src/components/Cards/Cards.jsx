@@ -7,9 +7,7 @@ import styles from './Cards.module.css'
 import coronaVid from '../../images/image.webm';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-  if (!confirmed) {
-    return 'Working from home...';
-  }
+
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center" className={styles.card}>

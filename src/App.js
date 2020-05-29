@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker, initGA, PageView } from './components';
+import { Cards, Chart, CountryPicker, initGA, PageView, ProgressBar } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 
@@ -32,6 +32,15 @@ class App extends React.Component {
 
   render() {
     const { data, country } = this.state;
+
+    if (!data || !data.confirmed) {
+      return (
+        <div>
+          <ProgressBar />
+          Working from home....
+        </div>
+      );
+    }
 
     return (
       <div className={styles.container}>
